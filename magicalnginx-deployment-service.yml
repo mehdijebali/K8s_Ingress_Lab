@@ -5,9 +5,9 @@ metadata:
 spec:
   type: NodePort
   ports:
-    - protocol: TCP
+    - name: http
+      protocol: TCP
       port: 80
-      nodePort: 31304
-      name: http
+      targetPort: 80
   selector:
     app: magical-nginx

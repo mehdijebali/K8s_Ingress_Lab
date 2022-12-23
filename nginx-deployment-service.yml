@@ -5,8 +5,9 @@ metadata:
 spec:
   type: NodePort
   ports:
-    - protocol: TCP
+    - name: http
+      protocol: TCP
       port: 80
-      nodePort: 31303
+      targetPort: 80
   selector:
     app: nginx-official
