@@ -21,3 +21,27 @@ spec:
             port:
               number: 80
 ```
+## Instructions
+1. Clone the project 
+```
+git clone https://github.com/mehdijebali/K8s_Ingress_Lab.git
+```
+2. Apply manifest using **kubectl**
+```
+kubectl apply -f /path/to/manifest.yml
+```
+3. You can check the status of pods, services, deployments, and ingresses  with the following commands
+```
+kubecl get pods | grep <pod_name>
+kubectl get deployments | grep <deployment_name>
+kubectl get svc | grep <svc_name>
+kubectl get ing | grep <ingress_name>
+```
+4. You can also list additional information of specifice pod,service, deployment, and ingress for any debugging issue
+```
+kubectl describe pod <pod_name>
+kubectl describe deployment <deployment_name>
+kubectl describe svc <service_name>
+kubectl describe ing <ingress_name>
+```
+The **<pod_name>, <deployment_name>, <service_name>), <ingress_name>** are the values of the key `metadata.name` in each k8s manifest yaml file.
